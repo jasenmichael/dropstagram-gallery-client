@@ -79,7 +79,7 @@ function addImagesToPage(imageList) {
     a.className = "dw-pnl"
     a.appendChild(img)
     img.src = image.thumb
-    img.className = "dw-pnl__cntnt image img-responsive " + image.source
+    img.className = "dw-pnl__cntnt image img-responsive scale-transition" + image.source
     gallery.appendChild(a)
   })
   filterSelection("all")
@@ -110,9 +110,9 @@ function showGallery(event) {
 
 function showAbout(event) {
   event.preventDefault()
+  document.querySelector("#about").style.display = "block"
   document.querySelector("#filter").style.display = "none"
   document.querySelector("#gallery").style.display = "none"
-  document.querySelector("#about").style.display = "block"
 }
 
 
