@@ -23,6 +23,9 @@ describe("test dropstagrambox-gallery-client", () => {
     cy.get('.dropbox').should('have.class', 'show')
     cy.get('.instagram').should('have.class', 'show')
 
+    // about section hidden by default
+    cy.get('#about').should('not.be.visible')
+
 
 
   })
