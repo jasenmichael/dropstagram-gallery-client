@@ -14,45 +14,74 @@
 <body>
 
   <div class="navbar-fixed">
-     <nav class="flow-text">
-       <div class="nav-wrapper flow-text container">
-         <a href="#!" class="brand-logo flow-text">Dropstagrambox Gallery</a>
-         <ul class="right">
-         <!-- <ul class="right hide-on-med-and-down"> -->
-           <li><a href="#" onclick="showAbout()">About</a></li>
-         </ul>
-       </div>
-     </nav>
-   </div>
-
-
-<div class="container">
-
-  <div id="filter" class="center">
-    <button id="insta" class="btn" onclick="filterSelection('instagram')"><i class="social fab fa-instagram fa-2x"></i> Instagram</button>
-    <button id="both" class="btn active" onclick="filterSelection('all')"><i class="social fab fa-instagram fa-2x"></i> Both <i class="social fab fa-dropbox fa-2x"></i></button>
-    <button id="drop" class="btn" onclick="filterSelection('dropbox')">Dropbox <i class="social fab fa-dropbox fa-2x"></i></button>
+    <nav class="flow-text">
+      <div class="nav-wrapper flow-text container">
+        <a href="#" onclick="showGallery(event)" class="brand-logo flow-text">Dropstagrambox Gallery</a>
+        <ul class="right">
+          <!-- <ul class="right hide-on-med-and-down"> -->
+          <li><a href="#" onclick="showAbout(event)">About</a></li>
+        </ul>
+      </div>
+    </nav>
   </div>
 
-  <div id="gallery" class="s12 center dw">
+
+  <div class="container">
+
+    <div id="filter" class="center">
+      <button id="insta" class="btn" onclick="filterSelection('instagram')"><i class="social fab fa-instagram fa-2x"></i> Instagram</button>
+      <button id="both" class="btn active" onclick="filterSelection('all')"><i class="social fab fa-instagram fa-2x"></i> Both <i class="social fab fa-dropbox fa-2x"></i></button>
+      <button id="drop" class="btn" onclick="filterSelection('dropbox')">Dropbox <i class="social fab fa-dropbox fa-2x"></i></button>
+    </div>
+
+    <div id="gallery" class="s12 center dw"></div>
+
+    <div id="about" class="container center">
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-image">
+              
+              <span class="card-title">A Simple Gallery - that gets images from Dropbox and Instagram</span>
+            </div>
+            <div class="card-content">
+              <h3><i class="social fab fa-dropbox fa-2x"></i> Dropstagrambox <i class="social fab fa-instagram fa-2x"></i></h3>
+
+              <p class="flow-text">
+                A simple web client that gets images from 2 REST endpoints.
+              </p>
+              <p class="flow-text">
+                "git" the source code <a target=”_blank” href="https://github.com/jasenmichael/dropstagram-gallery-client"><i class="social fab fa-github fa-1x"></i> here</a>
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="#" onclick="showGallery(event)">back to gallery</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
 
   </div>
 
-</div>
 
-
-<footer>
-  <hr>
-  <div class="col s12 m6 l4 card-content center-align">
-    <h5>dropstagram-gallery-client</h5>
-    <h6><i>Author: </i>@jasenmichael</h6>
-    <h6>fork it <a href="https://github.com/jasenmichael/dropstagram-gallery-client">here</a></h6>
-    <i class="social fab fa-github fa-2x"></i>
-    <i class="social fab fa-linkedin fa-2x"></i>
-    <i class="social fab fa-facebook fa-2x"></i>
-    <i class="social fab fa-instagram fa-2x"></i>
-</div>
-</footer>
+  <footer>
+    <hr>
+    <div class="col s12 m6 l4 card-content center-align">
+      <h5>dropstagram-gallery-client</h5>
+      <h6><i>Author: </i>@jasenmichael</h6>
+      <h6>fork it <a href="https://github.com/jasenmichael/dropstagram-gallery-client">here</a></h6>
+      <i class="social fab fa-github fa-2x"></i>
+      <i class="social fab fa-linkedin fa-2x"></i>
+      <i class="social fab fa-facebook fa-2x"></i>
+      <i class="social fab fa-instagram fa-2x"></i>
+    </div>
+  </footer>
 
 
   <script src="assets/main.js"></script>
