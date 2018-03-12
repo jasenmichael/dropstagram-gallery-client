@@ -99,6 +99,23 @@ function shuffle(array) {
   return array
 }
 
+// show About
+function showGallery(event) {
+  event.preventDefault()
+  document.querySelector("#filter").style.display = "block"
+  document.querySelector("#gallery").style.display = "block"
+  document.querySelector("#about").style.display = "none"
+}
+
+
+function showAbout(event) {
+  event.preventDefault()
+  document.querySelector("#filter").style.display = "none"
+  document.querySelector("#gallery").style.display = "none"
+  document.querySelector("#about").style.display = "block"
+}
+
+
 // filter functions section
 function filterSelection(c) {
   var x, i;
