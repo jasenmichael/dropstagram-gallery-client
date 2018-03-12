@@ -26,6 +26,11 @@ describe("test dropstagrambox-gallery-client", () => {
     // about section hidden by default
     cy.get('#about').should('not.be.visible')
 
+    // about link displays only about section
+    cy.get('#aboutlink').click()
+    cy.wait(2000)
+    cy.get('#gallery').should('not.have.class', 'show')
+    cy.get('#about').should('be.visible')
 
 
   })
