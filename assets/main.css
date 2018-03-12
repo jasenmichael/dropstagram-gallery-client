@@ -4,6 +4,9 @@ html {
 
 body {
   background-color: #302b27;
+  display: flex;
+  min-height: 85vh;
+  flex-direction: column;
 }
 
 nav {
@@ -19,6 +22,7 @@ nav {
 
 .container {
   min-width: 90vw;
+  flex: 1 0 auto;
 }
 
 #filter {
@@ -56,7 +60,12 @@ img.show {
 
 #about {
   display: none;
+  vertical-align: middle;
 }
+
+/* .card {
+  vertical-align: middle;
+} */
 
 hr {
   border: 0;
@@ -65,8 +74,10 @@ hr {
 }
 
 footer {
-  padding-bottom: 3em;
+  padding-bottom: 5em;
   color: white;
+  height: 30px;
+  margin: 0;
 }
 
 .dw {
