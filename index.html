@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropstagrambox Gallery</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="assets/main.css">
+</head>
+
+<body>
+
+  <div class="navbar-fixed">
+     <nav class="flow-text">
+       <div class="nav-wrapper flow-text container">
+         <a href="#!" class="brand-logo">Dropstagrambox Gallery</a>
+         <ul class="right">
+         <!-- <ul class="right hide-on-med-and-down"> -->
+           <li><a href="#" onclick="showAbout()">About</a></li>
+         </ul>
+       </div>
+     </nav>
+   </div>
+
+
+<div class="container">
+
+  <div id="filter" class="center">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('instagram')"> Instagram</button>
+    <button class="btn" onclick="filterSelection('dropbox')"> Dropbox</button>
+  </div>
+
+  <div id="gallery" class="s12 center dw">
+
+  </div>
+
+</div>
+
+
+<footer>
+  <hr>
+  <div class="col s12 m6 l4 card-content center-align">
+    <h5>dropstagram-gallery-client</h5>
+    <h6><i>Author: </i>@jasenmichael</h6>
+    <h6>fork it <a href="https://github.com/jasenmichael/dropstagram-gallery-client">here</a></h6>
+    <i class="social fab fa-github fa-2x"></i>
+    <i class="social fab fa-linkedin fa-2x"></i>
+    <i class="social fab fa-facebook fa-2x"></i>
+    <i class="social fab fa-instagram fa-2x"></i>
+</div>
+</footer>
+
+
+  <script src="assets/main.js"></script>
+
+</body>
+
+</html>
