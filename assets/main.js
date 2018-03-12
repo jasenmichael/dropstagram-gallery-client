@@ -5,7 +5,8 @@ const instaUrl = 'https://api.instagram.com/v1/users/self/media/recent?access_to
 
 let imageList = []
 getGalleries()
-console.log(imageList)
+//console.log(imageList)
+
 function getGalleries() {
   imageList = []
   getDbox(`${dBoxUrl}/api/images`)
@@ -21,6 +22,7 @@ function getDbox(dboxApiUrl) {
   return fetch(dboxApiUrl)
     .then(res => res.json())
 }
+
 function addDbox(dBoxList) {
   //console.log(dBoxList)
   dBoxList.forEach((item, index) => {
@@ -37,12 +39,14 @@ function addDbox(dBoxList) {
   //console.log(imageList);
 }
 // end dbox get and add to imageList
-/////////////////////
+
+
 // start insta get and add to imageList
 function getInsta(instaUrl) {
   return fetch(instaUrl)
     .then(res => res.json())
 }
+
 function addInsta(instaList) {
   //console.log(instaList.data)
   instaList.data.forEach((item, index) => {
@@ -61,6 +65,7 @@ function addInsta(instaList) {
 
 // add images to page
 const gallery = document.querySelector('#gallery')
+
 function addImagesToPage(imageList) {
   //console.log(imageList)
   shuffle(imageList)
@@ -77,24 +82,65 @@ function addImagesToPage(imageList) {
     img.className = "dw-pnl__cntnt image img-responsive " + image.source
     gallery.appendChild(a)
   })
+  filterSelection("all")
 }
 
 // shuffle array
 // https://repl.it/@jasenmichael/ShuffleFunction
 function shuffle(array) {
-    let counter = array.length
-    while (counter > 0) {
-        let index = Math.floor(Math.random() * counter)
-        counter--;
-        let temp = array[counter]
-        array[counter] = array[index]
-        array[index] = temp
+  let counter = array.length
+  while (counter > 0) {
+    let index = Math.floor(Math.random() * counter)
+    counter--;
+    let temp = array[counter]
+    array[counter] = array[index]
+    array[index] = temp
+  }
+  return array
+}
+
+// filter functions section
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("image");
+  if (c == "all") c = ""
+  for (i = 0; i < x.length; i++) {
+    removeClass(x[i], "show")
+    if (x[i].className.indexOf(c) > -1) addClass(x[i], "show")
+  }
+}
+
+function addClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ")
+  arr2 = name.split(" ")
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i]
     }
-    return array
+  }
 }
 
-
-// show selected class
-function show(filterItem) {
-  let thePic = document.querySelectorAll(filterItem)
+function removeClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ")
+  arr2 = name.split(" ")
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1)
+    }
+  }
+  element.className = arr1.join(" ")
 }
+
+// Add active class to the current button (highlight it)
+var btnFilter = document.getElementById("filter")
+var btns = btnFilter.getElementsByClassName("btn")
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active")
+    current[0].className = current[0].className.replace(" active", "")
+    this.className += " active"
+  })
+}
+// end filter functions section
