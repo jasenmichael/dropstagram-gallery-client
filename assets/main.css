@@ -1,9 +1,43 @@
+html {
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+body {
+  background-color: #302b27;
+}
+
+nav {
+  background-color: #1b264f;
+  height: 2em;
+}
+
+.brand-logo {
+  vertical-align: middle;
+  margin: -10px;
+  padding: -20px;
+}
+
 .container {
   min-width: 90vw;
 }
 
 #filter {
   padding: 1em;
+}
+
+.btn {
+  padding-top: .2em;
+  margin: 0em;
+  color: #f5f3f5;
+  background-color: #1b264f;
+}
+
+.btn.active {
+  background-color: #0d21a1;
+}
+
+.btn:hover {
+  background-color: #576ca8
 }
 
 #gallery {
@@ -25,6 +59,7 @@ hr {
 
 footer {
   padding-bottom: 3em;
+  color: white;
 }
 
 .dw {
