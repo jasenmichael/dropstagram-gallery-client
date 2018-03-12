@@ -16,7 +16,7 @@
   <div class="navbar-fixed">
      <nav class="flow-text">
        <div class="nav-wrapper flow-text container">
-         <a href="#!" class="brand-logo">Dropstagrambox Gallery</a>
+         <a href="#!" class="brand-logo flow-text">Dropstagrambox Gallery</a>
          <ul class="right">
          <!-- <ul class="right hide-on-med-and-down"> -->
            <li><a href="#" onclick="showAbout()">About</a></li>
@@ -29,9 +29,9 @@
 <div class="container">
 
   <div id="filter" class="center">
-    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-    <button class="btn" onclick="filterSelection('instagram')"> Instagram</button>
-    <button class="btn" onclick="filterSelection('dropbox')"> Dropbox</button>
+    <button class="btn" onclick="show('instagram')"><i class="social fab fa-instagram fa-2x"></i> Instagram</button>
+    <button class="btn active" onclick="show('all')"><i class="social fab fa-instagram fa-2x"></i> Both <i class="social fab fa-dropbox fa-2x"></i></button>
+    <button class="btn" onclick="show('dropbox')">Dropbox <i class="social fab fa-dropbox fa-2x"></i></button>
   </div>
 
   <div id="gallery" class="s12 center dw">
