@@ -79,7 +79,7 @@ function addImagesToPage(imageList) {
     a.className = "dw-pnl"
     a.appendChild(img)
     img.src = image.thumb
-    img.className = "dw-pnl__cntnt image img-responsive scale-transition" + image.source
+    img.className = "dw-pnl__cntnt image img-responsive scale-transition " + image.source
     gallery.appendChild(a)
   })
   filterSelection("all")
