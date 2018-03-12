@@ -25,6 +25,10 @@ nav {
   padding: 1em;
 }
 
+img.show {
+  display: block;
+}
+
 .btn {
   padding-top: .2em;
   margin: 0em;
@@ -46,8 +50,8 @@ nav {
 }
 
 .image {
-  padding-left: -20px;
   max-height: 500px;
+  display: none;
 }
 
 hr {
