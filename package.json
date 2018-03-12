@@ -1,0 +1,30 @@
+{
+  "name": "dropstagrambox-gallery-client",
+  "version": "1.0.0",
+  "description": "a client that pulls images from the instagram api and the dropbox api via dropbox-node-sync https://github.com/jasenmichael/dropbox-node-sync",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "npx cypress run --browser chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasenmichael/dropstagram-gallery-client.git"
+  },
+  "keywords": [
+    "dropbox",
+    "instagram",
+    "dropbox-node-sync"
+  ],
+  "author": "Jasen Michael",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasenmichael/dropstagram-gallery-client/issues"
+  },
+  "homepage": "https://github.com/jasenmichael/dropstagram-gallery-client#readme",
+  "devDependencies": {
+    "cypress": "^2.1.0"
+  }
+}
