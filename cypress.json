@@ -1,0 +1,8 @@
+{
+    "baseUrl": "http://dropstagrambox.surge.sh",
+    "integrationFolder": "tests",
+    "screenshotsFolder": "tests/screenshots",
+    "videosFolder": "tests/recordings",
+    "pluginsFile": false,
+    "supportFile": false
+}
