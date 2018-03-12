@@ -92,3 +92,9 @@ function shuffle(array) {
     }
     return array
 }
+
+
+// show selected class
+function show(filterItem) {
+  let thePic = document.querySelectorAll(filterItem)
+}
