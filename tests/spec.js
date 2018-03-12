@@ -5,6 +5,12 @@ describe("test dropstagrambox-gallery-client", () => {
     // check .brand-logo is "DropstagramboxGallery"
     cy.get('.brand-logo').should('have.text', 'DropstagramboxGallery')
 
+    // instagram button displays only instagram images
+    cy.get('#insta').click()
+    cy.wait(1000)
+    cy.get('.instagram').should('have.class', 'show')
+    cy.get('.dropbox').should('not.have.class', 'show')
+
 
 
   })
