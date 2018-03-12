@@ -29,9 +29,9 @@
 <div class="container">
 
   <div id="filter" class="center">
-    <button class="btn" onclick="show('instagram')"><i class="social fab fa-instagram fa-2x"></i> Instagram</button>
-    <button class="btn active" onclick="show('all')"><i class="social fab fa-instagram fa-2x"></i> Both <i class="social fab fa-dropbox fa-2x"></i></button>
-    <button class="btn" onclick="show('dropbox')">Dropbox <i class="social fab fa-dropbox fa-2x"></i></button>
+    <button id="insta" class="btn" onclick="filterSelection('instagram')"><i class="social fab fa-instagram fa-2x"></i> Instagram</button>
+    <button id="both" class="btn active" onclick="filterSelection('all')"><i class="social fab fa-instagram fa-2x"></i> Both <i class="social fab fa-dropbox fa-2x"></i></button>
+    <button id="drop" class="btn" onclick="filterSelection('dropbox')">Dropbox <i class="social fab fa-dropbox fa-2x"></i></button>
   </div>
 
   <div id="gallery" class="s12 center dw">
