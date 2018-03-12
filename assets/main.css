@@ -47,8 +47,7 @@ nav {
 
 .image {
   padding-left: -20px;
-  /* max-width: 400px; */
-  max-height: 600px;
+  max-height: 500px;
 }
 
 hr {
