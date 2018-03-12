@@ -32,6 +32,10 @@ describe("test dropstagrambox-gallery-client", () => {
     cy.get('#gallery').should('not.have.class', 'show')
     cy.get('#about').should('be.visible')
 
+    // return to home should do that
+    cy.get('.card-action').click()
+    cy.get('#gallery').should('be.visible')
+    cy.get('#about').should('not.be.visible')
 
   })
 })
