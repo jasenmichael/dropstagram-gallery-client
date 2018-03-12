@@ -17,6 +17,12 @@ describe("test dropstagrambox-gallery-client", () => {
     cy.get('.dropbox').should('have.class', 'show')
     cy.get('.instagram').should('not.have.class', 'show')
 
+    // both button displays only instagram  and dropbox  images
+    cy.get('#both').click()
+    cy.wait(1000)
+    cy.get('.dropbox').should('have.class', 'show')
+    cy.get('.instagram').should('have.class', 'show')
+
 
 
   })
