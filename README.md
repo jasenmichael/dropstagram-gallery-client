@@ -15,7 +15,7 @@ cd dropstagram-gallery-client
 
 npm install
 
-npm test
+npm start
 ```
 
 this software is forever licensed under the GNU General Public License, version 2
